@@ -1,7 +1,8 @@
-# epsilon-net of size 3 for rectangle
+# epsilon-net of size 3 for rectangle, points are randomly placed in the grid
 
 
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
+import random
 
 def fact(n):
     return 1 if (n == 1 or n == 0) else n * fact(n - 1)
@@ -30,7 +31,7 @@ def plotBestResultPoints(bestResultPoints):
 
 
 N = int(input())
-best_result = float(input())
+best_result = 0
 best_result_points = []
 
 return_count = 0
@@ -317,9 +318,9 @@ def main_algo(points, N):
                     min_of_maxes = max
     # print(min_of_maxes / N)
     global best_result
-    global best_result_points
+    # global best_result_points
     if best_result < (min_of_maxes / N):
-        best_result_points = []
+        # best_result_points = []
         best_result = (min_of_maxes / N)
         pointPlusFrac = [points, best_result]
         print(pointPlusFrac)
@@ -344,10 +345,15 @@ def generate_permutations_and_call_algo(arr, l, r):
 
 
 
-arr = []
-for i in range(0, N):
-    arr.append(i)
-generate_permutations_and_call_algo(arr, 0, N - 1)
+grid_size = N
+while True:
+    # X = [x for x in range(0, N)]
+    Y = [y for y in range(0, N)]
+    point_set = []
+    for i in range(0, N):
+        point_set.append([i, Y.pop(random.randint(0, len(Y) - 1))])
+    # print(point_set)
+    main_algo(point_set, N)
 
 # main_algo([[0, 0], [1, 5], [2, 3], [3, 2], [4, 8], [5, 1], [6, 10], [7, 11], [8, 9], [9, 4], [10, 7], [11, 6]], 12)
 

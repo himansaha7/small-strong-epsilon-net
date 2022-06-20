@@ -1,3 +1,6 @@
+# epsilon-net of size 2 for rectangle
+
+
 # import matplotlib.pyplot as plt
 from matplotlib import pyplot
 
@@ -21,8 +24,10 @@ def plotBestResultPoints(bestResultPoints):
         x = []
         y = []
     plt.show()
-# for N different distributions of points we will check the fraction
 
+
+
+# for N different distributions of points we will check the fraction
 
 N = int(input())
 best_result = float(input())

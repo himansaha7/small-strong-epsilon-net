@@ -1,3 +1,5 @@
+# epsilon-net of size 2 for half-spaces
+
 
 import random
 

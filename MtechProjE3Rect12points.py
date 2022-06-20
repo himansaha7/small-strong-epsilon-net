@@ -1,5 +1,3 @@
-# epsilon-net of size 3 for rectangle
-
 
 import matplotlib.pyplot as plt
 
@@ -30,7 +28,7 @@ def plotBestResultPoints(bestResultPoints):
 
 
 N = int(input())
-best_result = float(input())
+best_result = 0.41
 best_result_points = []
 
 return_count = 0
@@ -318,7 +316,7 @@ def main_algo(points, N):
     # print(min_of_maxes / N)
     global best_result
     global best_result_points
-    if best_result < (min_of_maxes / N):
+    if best_result <= (min_of_maxes / N):
         best_result_points = []
         best_result = (min_of_maxes / N)
         pointPlusFrac = [points, best_result]

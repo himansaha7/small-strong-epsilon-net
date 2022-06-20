@@ -1,3 +1,6 @@
+# epsilon-net of size 2 for disk
+
+
 from math import sqrt
 import numpy as np
 import random
